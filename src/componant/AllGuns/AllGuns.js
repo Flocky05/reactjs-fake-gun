@@ -4,7 +4,7 @@ import { useState } from 'react';
 import SingleGun from '../SingleGun/SingleGun';
 
 
-const AllGuns = () => {
+const AllGuns = ({ countIncrease }) => {
     const [guns, setGuns] = useState([]);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const AllGuns = () => {
             <p className='text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A numquam repellendus qui velit veniam repellat consequatur ipsum voluptatem, aspernatur eligendi autem ipsa maiores ab cumque nisi accusamus. At, aut ipsum.</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto'>
                 {
-                    guns.map(gun => (<SingleGun gun={gun}></SingleGun>))
+                    guns.map(gun => (<SingleGun gun={gun} countIncrease={countIncrease} ></SingleGun>))
                 }
             </div>
         </div>
