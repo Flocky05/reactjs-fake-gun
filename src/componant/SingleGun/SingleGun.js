@@ -25,7 +25,7 @@ const SingleGun = (props) => {
                             <button onClick={() => countIncrease()} className="btn btn-sm bg-emerald-500 m-2">Add to Cut</button>
                             {/* <button className="btn btn-sm bg-indigo-600 m-2">Details</button> */}
                             <label onClick={() => setModalData(gun)} htmlFor="my-modal-3" className="btn modal-button btn btn-sm bg-indigo-600 m-2">Details</label>
-                            {modalData && <Modal data={modalData} />}
+                            {modalData && <Modal data={modalData} setModalData={setModalData} />}
                         </div>
                     </div>
                 </div>
